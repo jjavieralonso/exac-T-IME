@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exa-T-IME</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>exac-T-IME</h1>
+    <h2>Frena el tiempo exacto <br> en 5 segundos y gana!</h2>
+    <div class="btnAndAttempts">
+        <button id="startButton" onclick="startPauseGame()"><svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-player-play-filled" width="20" height="20" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
+                    stroke-width="0" fill="currentColor"></path>
+            </svg></button>
+        <div id="count">Intentos: <span id="attempts">0</span></div>
+    </div>
+    <div id="timer"><span id="seconds">00</span>:<span id="milliseconds">00</span></div>
+    <div id="result"></div>
+
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
+    <script src="footer.js"></script>
+</body>
+
+</html>
