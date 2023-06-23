@@ -21,12 +21,12 @@ function startPauseGame() {
         startButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-repeat" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 12v-3a3 3 0 0 1 3 -3h13m-3 -3l3 3l-3 3"></path><path d="M20 12v3a3 3 0 0 1 -3 3h-13m3 3l-3 -3l3 -3"></path></svg>';
         stateGame = 2;
         cancelAnimationFrame(animationFrameId);
+        attempts++;
         if (secondsElement.textContent !== '05' || millisecondsElement.textContent !== '00') {
             resultElement.textContent = 'Perdiste!';
-            attempts++;
             attemptsElement.textContent = attempts;
         } else{
-            resultElement.textContent = 'Ganaste!';
+            resultElement.textContent = 'Ganaste! en ' + attempts + (attempts === 1 ? ' intento.' : ' intentos.'); //si es 1 imprime intento, y sino intentos.
             attempts=0;
         }
         startTime = undefined;
